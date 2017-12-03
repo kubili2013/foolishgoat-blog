@@ -40,7 +40,7 @@ class UsersRepository
     public function createUserUseWeibo($weiboUser){
         $user = new User();
         $user->name = $weiboUser->nickname;
-        $user->email = $weiboUser->id;
+        $user->email = $weiboUser->email;
         $user->password = Crypt::encrypt(str_random(32));
         $user->avatar = $weiboUser->avatar;
         $user->save();
