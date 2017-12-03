@@ -1,0 +1,59 @@
+
+body{
+    background:#f0f2f5;
+}
+
+.panel{
+    background:#fff;
+    padding:24px 0;
+}
+.control-label{
+    padding-left:10px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.md-preview{
+    padding-left:10px;
+}
+
+.search-bar{
+    border-radius: 30px;
+    border:1px solid #eee;
+}
+.badge-danger[href],
+.badge-success[href],
+.badge-default[href],
+.badge-info[href],
+.badge-warning[href]
+{
+    cursor:pointer;
+}
+.badge-danger[href]:hover{
+    background-color:#FF3636;
+    color:#fff;
+}
+.badge-success[href]:hover{
+    background-color:#18ce0f;
+    color:#fff;
+}
+.badge-default[href]:hover{
+    background-color:#888;
+    color:#fff;
+}
+.badge-primary[href]:hover{
+    background-color:#f96332;
+    color:#fff;
+}
+.badge-info[href]:hover{
+    background-color:#2CA8FF;
+    color:#fff;
+}
+.badge-warning[href]:hover{
+    background-color:#FFB236;
+    color:#fff;
+}
+
+.navbar-transparent{
+    background-color: rgba(247,99,60,0.3);
+}
