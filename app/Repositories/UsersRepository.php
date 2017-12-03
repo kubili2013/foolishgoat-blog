@@ -30,6 +30,29 @@ class UsersRepository
         $github->github_id = $githubUser->id;
         $github->index_url = $githubUser->original['url'];
         $user->github()->save($github);
+        if($user->id == 1){
+            $user->roles()->attach(1);
+            $user->roles()->attach(2);
+        }
+        return $user;
+    }
+
+    public function createUserUseWeibo($weiboUser){
+        $user = new User();
+        $user->name = $weiboUser->nickname;
+        $user->email = $weiboUser->email;
+        $user->password = Crypt::encrypt(str_random(32));
+        $user->avatar = $weiboUser->avatar;
+        $user->save();
+        $weibo = new Weibo();
+        $weibo->id = $weiboUser->id;
+        $weibo->weibo_id = $weiboUser->id;
+        $weibo->index_url = $weiboUser->original['url'];
+        $user->weibo()->save($weibo);
+        if($user->id == 1){
+            $user->roles()->attach(1);
+            $user->roles()->attach(2);
+        }
         return $user;
     }
 

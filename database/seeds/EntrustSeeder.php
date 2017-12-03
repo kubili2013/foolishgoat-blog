@@ -21,7 +21,6 @@ class EntrustSeeder extends Seeder
         DB::table('permissions')->insert([
             ['id' => 1, 'name' => "system", 'display_name' => '系统管理权限', 'description' => '系统管理权限',],
             ['id' => 2, 'name' => "article", 'display_name' => '文章权限', 'description' => '文章增删改查权限',],
-
         ]);
     }
 }
