@@ -21,12 +21,6 @@
                         </div>
                         <div class="clearfix" ></div>
                     </div>
-                    <script type="text/javascript">
-                        /* 文档加载完成后,设置眼睛移动事件,因为此时 jquery 还没有加载完成,所以用window.onload */
-                        window.onload = function () {
-                            $(document).mousemove(function(e){removeLogoEyes(e);});
-                        }
-                    </script>
                 @else
                     <div>
                         <img src="{{auth()->user()->avatar}}" class="user-avatar" alt="">
@@ -68,6 +62,7 @@
                     <script type="text/javascript">
                         /* 文档加载完成后,设置眼睛移动事件,因为此时 jquery 还没有加载完成,所以用window.onload */
                         window.onload = function () {
+                            $(document).mousemove(function(e){removeLogoEyes(e);});
                             /* 菜单事件 */
                             $('.image-menu').click(function(){
                                 switch ($(this).attr('_title')) {
