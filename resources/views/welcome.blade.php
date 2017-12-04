@@ -25,21 +25,6 @@
                         /* 文档加载完成后,设置眼睛移动事件,因为此时 jquery 还没有加载完成,所以用window.onload */
                         window.onload = function () {
                             $(document).mousemove(function(e){removeLogoEyes(e);});
-                            /* 菜单事件 */
-                            $('.image-menu').click(function(){
-                                switch ($(this).attr('_title')) {
-                                    case "{{__('Article')}}": window.location.href="{{route('articles')}}";
-                                        break;
-                                    case "{{__('Share')}}": window.location.href="{{route('shares')}}";
-                                        break;
-                                    case "{{__('Diary')}}": window.location.href="{{route('diaries')}}";
-                                        break;
-                                    case "{{__('Picture')}}": window.location.href="{{route('pictures')}}";
-                                        break;
-                                    case "{{__('Collection')}}": window.location.href="{{route('collections')}}";
-                                        break;
-                                }
-                            });
                         }
                     </script>
                 @else
@@ -80,7 +65,26 @@
                             </div>
                         </div>
                     </div>
-
+                    <script type="text/javascript">
+                        /* 文档加载完成后,设置眼睛移动事件,因为此时 jquery 还没有加载完成,所以用window.onload */
+                        window.onload = function () {
+                            /* 菜单事件 */
+                            $('.image-menu').click(function(){
+                                switch ($(this).attr('_title')) {
+                                    case "{{__('Article')}}": window.location.href="{{route('articles')}}";
+                                        break;
+                                    case "{{__('Share')}}": window.location.href="{{route('shares')}}";
+                                        break;
+                                    case "{{__('Diary')}}": window.location.href="{{route('diaries')}}";
+                                        break;
+                                    case "{{__('Picture')}}": window.location.href="{{route('pictures')}}";
+                                        break;
+                                    case "{{__('Collection')}}": window.location.href="{{route('collections')}}";
+                                        break;
+                                }
+                            });
+                        }
+                    </script>
                 </div>
             </div>
         {{--</div>--}}
