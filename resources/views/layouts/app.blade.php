@@ -75,7 +75,5 @@
         });
     }
 </script>
-@if(!auth()->check() || auth()->user()->email == '913493158@qq.com')
-    <script src="{{ asset('js/mine.js') }}" type="text/javascript"></script>
-@endif
+<script src="{{ asset('js/mine.js') }}" type="text/javascript"></script>
 </html>
