@@ -85,6 +85,7 @@
             </div>
 
             <div class="col-lg-4 col-md-4 col-sm-12">
+                @if(auth()->check())
                 <div class="panel panel-default" style="margin-bottom: 24px;border:1px solid #ddd;padding:24px 15px;">
                     <div class="row justify-content-md-center">
                         <div class="col-lg-12 text-center">
@@ -114,6 +115,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
             </div>
 
         </div>
