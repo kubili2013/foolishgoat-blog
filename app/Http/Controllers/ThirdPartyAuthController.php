@@ -44,9 +44,10 @@ class ThirdPartyAuthController extends Controller
             $wUser = $this->repoUser->getWeiboUser($tUser->id);
             if(!$wUser){
                 //不存在 新建用户登录
-                $this->repoUser->createUserUseWeibo($wUser);
+                Auth::login($this->repoUser->createUserUseWeibo($tUser),true);
+            }else{
+                Auth::login($wUser->user, true);
             }
-            Auth::login($wUser->user, true);
         }
         return redirect('/');
     }

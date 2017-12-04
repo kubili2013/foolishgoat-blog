@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Weibo extends Model
 {
     protected $table = 'weibo';
-    protected $fillable = ['weibo_id','index_url','user_id'];
+    protected $fillable = ['id','weibo_id','index_url','user_id'];
     public $incrementing = false;
 
     public function user(){

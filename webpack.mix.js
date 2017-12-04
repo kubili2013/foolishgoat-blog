@@ -26,8 +26,8 @@ mix.scripts([
     ],
     'public/js/plugin.js');
 
-mix.scripts(['resources/assets/js/now-ui-kit.js','resources/assets/js/logo.js'], 'public/js/app.js').version();
-mix.scripts(['resources/assets/js/menu.js'], 'public/js/mine.js').version();
+mix.scripts(['resources/assets/js/now-ui-kit.js','resources/assets/js/menu.js'], 'public/js/app.js').version();
+mix.scripts(['resources/assets/js/logo.js'], 'public/js/mine.js').version();
 
 
 

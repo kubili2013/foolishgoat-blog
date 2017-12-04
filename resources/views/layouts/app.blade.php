@@ -56,7 +56,7 @@
                 to();
             }
         });
-        // simeditor 图片宽度问题
+        // simeditor
         $(".markdown-body img").removeAttr("height");
     });
     function deleteCheck(href){
