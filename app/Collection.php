@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Collection extends Model
 {
     use SoftDeletes;
+    protected $table = "collections";
     protected $dates = ['deleted_at'];
     protected  $fillable = [
         'title',

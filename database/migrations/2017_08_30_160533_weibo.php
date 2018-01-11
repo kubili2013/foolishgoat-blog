@@ -14,9 +14,9 @@ class Weibo extends Migration
     public function up()
     {
         Schema::create('weibo', function (Blueprint $table) {
-            $table->integer('id')->unsigned()->unique();
+            $table->string('id',64)->unique();
             $table->integer('user_id')->unsigned();
-            $table->integer('weibo_id')->unsigned()->unique();
+            $table->string('weibo_id',64)->unique();
             $table->string('index_url',128)->nullable(true);
             $table->timestamps();
             $table->primary('id');
