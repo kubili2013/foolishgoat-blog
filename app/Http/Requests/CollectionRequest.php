@@ -34,7 +34,7 @@ class CollectionRequest extends FormRequest
             case 'POST':
             {
                 return [
-                    "title" => "required|unique:collection|max:64",
+                    "title" => "required|unique:collections|max:64",
                     "tags" => "required|max:64",
                     "content" => "required",
                     "type" =>"required|in:audio,video,article,website"
