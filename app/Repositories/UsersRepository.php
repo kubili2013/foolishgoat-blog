@@ -45,9 +45,9 @@ class UsersRepository
         $user->avatar = $weiboUser->avatar;
         $user->save();
         $weibo = new Weibo();
-        $weibo->id = $weiboUser->id;
+        //$weibo->id = $weiboUser->id;
         $weibo->weibo_id = $weiboUser->id;
-        $weibo->index_url = $weiboUser->original['url'];
+        $weibo->index_url = ($weiboUser->original['url'] == null ?$weiboUser->original['url']:"");
         $user->weibo()->save($weibo);
         if($user->id == 1){
             $user->roles()->attach(1);
