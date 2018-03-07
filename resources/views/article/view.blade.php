@@ -73,7 +73,7 @@
 
                             <script>
                                 function favorite(){
-                                    @if(!auth()->check())
+                                    @if(!Auth::check())
                                         window.location.href = "{{route('login')}}";
                                         return;
                                     @endif
@@ -86,7 +86,7 @@
                                     $("#btn_detach_favorite").show();
                                 }
                                 function detachFavorite(){
-                                    @if(!auth()->check())
+                                    @if(!Auth::check())
                                             window.location.href = "{{route('login')}}";
                                     return;
                                     @endif
@@ -100,7 +100,7 @@
                         </div>
                         <div class="col-lg-12 text-center" id="upvote_users" style="padding:15px;">
                             @foreach($article->upusers as $user)
-                                @if(auth()->user()->id == $user->id)
+                                @if(Auth::check() && auth()->user()->id == $user->id)
                                     <script>
                                         window.onload = function (){
                                             $("#btn_favorite").hide();
