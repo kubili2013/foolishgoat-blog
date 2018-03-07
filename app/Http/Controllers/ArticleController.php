@@ -139,7 +139,7 @@ class ArticleController extends Controller
                         $query->where('title','like',"%" . $request->get('search') . "%");
                     }
                 }
-            )->paginate(10);
+            )->orderBy('updated_at', 'desc')->paginate(10);
         }else{
             $articles = Tag::find($request->get('tag'))
                 ->articles()
@@ -154,7 +154,7 @@ class ArticleController extends Controller
                             $query->where('title','like',"%" . $request->get('search') . "%");
                         }
                     }
-                )
+                )->orderBy('updated_at', 'desc')
                 ->paginate(2);
         }
 
