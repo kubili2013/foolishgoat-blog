@@ -92,7 +92,7 @@
                     &copy;
                     <script>
                         document.write(new Date().getFullYear())
-                    </script> ⋅ {{__('Code&Design By FoolishGoat')}}
+                    </script> ⋅ {{__('Code&Design By FoolishGoat')}} ⋅ <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16055652号-2</a>
                 </div>
             </div>
         </footer>
