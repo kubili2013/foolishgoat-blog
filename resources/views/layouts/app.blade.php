@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>@stack('title'){{__('FoolishGoat')}} - @if(auth()->check()){{auth()->user()->name}}@endif {{__('Blog')}}</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-    <link rel="stylesheet" href="http://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css">
     @stack('css')
     <link href="{{ asset('css/common.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
@@ -30,7 +30,7 @@
 @endcomponent
 @endif
 </body>
-<script src="http://cdn.bootcss.com/highlight.js/8.4/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/8.4/highlight.min.js"></script>
 <!-- jquery boostrap popper -->
 <script src="{{ asset('js/jquery.3.2.1.min.js') }}" type="text/javascript"></script>
 <script src="{{ asset('js/popper.min.js') }}" type="text/javascript"></script>
